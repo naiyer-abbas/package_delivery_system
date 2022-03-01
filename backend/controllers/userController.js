@@ -21,7 +21,7 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
     var usr = new user({
         name: req.body.name,
-        email: req.body.name,
+        email: req.body.email,
         password: req.body.password,
         address: req.body.address,
     });
