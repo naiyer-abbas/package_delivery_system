@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService} from '../common.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-user-details',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserDetailsComponent implements OnInit {
 
-  constructor() { }
+  constructor(public commonService: CommonService) {}
 
   ngOnInit(): void {
   }
+
 
 }

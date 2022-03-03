@@ -4,12 +4,14 @@ import { LoginComponent } from './login/login.component';
 import { OtpVerificationComponent } from './otp-verification/otp-verification.component';
 import { SignupComponent } from './signup/signup.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'signup', component: SignupComponent},
   {path: 'otp-verification', component: OtpVerificationComponent},
-  {path: 'user-details', component: UserDetailsComponent}
+  {path: 'user-details', component: UserDetailsComponent},
+  {path: 'dashboard', component: DashboardComponent}
 ];
 
 @NgModule({

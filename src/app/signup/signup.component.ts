@@ -20,12 +20,13 @@ export class SignupComponent implements OnInit {
     this.router.navigateByUrl('otp-verification');
   }
 
+  // Add user to the database
+
   addUser(formObj: NgForm) {
-    console.log(formObj.value);
-    this.commonService.createUser(formObj.value).subscribe((Response) => {
-      console.log("User has been added");
-      this.router.navigate(['']);
-    });
+    
+    this.commonService.createUser(this.commonService.selectedUser).subscribe((res) => {
+      console.log('User added to database');
+    })
   }
 
 }

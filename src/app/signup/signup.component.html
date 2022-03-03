@@ -14,7 +14,7 @@
     </div>
     <div class="mb-4">
         <label for="mobile" class="form-label"> <h6>Mobile no</h6></label>
-        <input type="text" name = "mobile" class="form-control" id="mobile">
+        <input type="text" name = "mobile" #mobile="ngModel" [(ngModel)]="commonService.selectedUser.mobile" class="form-control" id="mobile">
     </div>
 
     <button type="submit"(click)="next(); addUser(myForm)" class="btn btn-success">Next</button>

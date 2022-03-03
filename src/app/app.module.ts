@@ -11,6 +11,8 @@ import { FooterComponent } from './footer/footer.component';
 import { OtpVerificationComponent } from './otp-verification/otp-verification.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { FormsModule } from '@angular/forms';
+import { CommonService } from './common.service';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     SignupComponent,
     FooterComponent,
     OtpVerificationComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,7 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [CommonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -24,6 +24,7 @@ router.post('/', (req, res) => {
         email: req.body.email,
         password: req.body.password,
         address: req.body.address,
+        mobile: req.body.mobile,
     });
     usr.save((err, doc) => {
       if(!err){res.send(doc);} 
