@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonService } from '../common.service';
+import { User } from '../shared/user.model';
 
 @Component({
   selector: 'app-otp-verification',
@@ -19,7 +20,7 @@ export class OtpVerificationComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  next = () =>{
+  verifyOtp(){
     //console.log(this.commonService.selectedUser.email)
     this.router.navigateByUrl('/dashboard')
   }

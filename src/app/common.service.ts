@@ -12,12 +12,24 @@ import {User} from './shared/user.model'
 export class CommonService{
   selectedUser: User = new User;
   users: User[] = [];
-  readonly baseURL = "http://localhost:3000/users";
+  readonly baseURL = "http://localhost:3000/api/";
 
   constructor(private http: HttpClient) { }
 
   createUser(user: User){
-    return this.http.post(this.baseURL, user);
+    return this.http.post(this.baseURL + '/register', user);
+  }
+
+  checkUser(user: User){
+    return this.http.post(this.baseURL + '/authenticate', user);
+  }
+
+  isUserVerified(user: User){
+    return this.http.post(`${this.baseURL}/user/verify`, user);
+  }
+
+  getOrders(email: any){
+    return this.http.post(`${this.baseURL}/myOrders`, {email});
   }
 }
 

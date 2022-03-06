@@ -16,9 +16,6 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  next = () =>{
-    this.router.navigateByUrl('otp-verification');
-  }
 
   // Add user to the database
 
@@ -26,6 +23,8 @@ export class SignupComponent implements OnInit {
     
     this.commonService.createUser(this.commonService.selectedUser).subscribe((res) => {
       console.log('User added to database');
+      localStorage.setItem("userLoggedin", this.commonService.selectedUser.email)
+      this.router.navigateByUrl('otp-verification');
     })
   }
 

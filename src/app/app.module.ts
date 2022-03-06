@@ -13,6 +13,10 @@ import { UserDetailsComponent } from './user-details/user-details.component';
 import { FormsModule } from '@angular/forms';
 import { CommonService } from './common.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { OrderScheduleComponent } from './order-schedule/order-schedule.component';
+import { OrderConfirmationComponent } from './order-confirmation/order-confirmation.component';
+import { MyOrdersComponent } from './my-orders/my-orders.component';
+import { CostEstimationService } from './cost-estimation.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     FooterComponent,
     OtpVerificationComponent,
     UserDetailsComponent,
-    DashboardComponent
+    DashboardComponent,
+    OrderScheduleComponent,
+    OrderConfirmationComponent,
+    MyOrdersComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +38,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [CommonService],
+  providers: [CommonService, CostEstimationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
