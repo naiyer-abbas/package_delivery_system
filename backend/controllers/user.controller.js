@@ -68,3 +68,17 @@ module.exports.userProfile = (req, res, next) =>{
         }
     );
 }
+
+module.exports.confirmUser = (req, res, next) => {
+    user.updateOne({email:req.body.email}, 
+        {verify:"true"}, function (err, docs) {
+        if (err){
+            //console.log(err)
+            res.send(404);
+        }
+        else{
+            //console.log("verified user" , docs);
+            res.send(200).json({message: "User has been verified!"});
+        }
+    }); 
+}

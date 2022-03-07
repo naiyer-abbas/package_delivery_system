@@ -23,9 +23,7 @@ var userSchema = new mongoose.Schema({
     },
     verify: {
         type: String
-    },
-    
-    saltSecret: String
+    }
 });
 
 // Custom validation for email
